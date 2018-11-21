@@ -2,10 +2,14 @@
 
 require_once("config.php");
 
-$root = new Usuario();
+//$root = new Usuario();
+//$root->loadById(1);
+//echo $root;
 
-$root->loadById(1);
+//$lista = Usuario::getList();
 
-echo $root;
+$lista = Usuario::search("fern");
+
+echo json_encode($lista);
 
 ?>
